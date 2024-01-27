@@ -164,7 +164,7 @@ let mySprite = new jSmearHash({
     </tr>
     <tr>
         <td>decodeBlurHash(blurhash: string, width: number, height: number, punch?: number) => Uint8ClampedArray</td>
-        <td>Provides a drop-in replacement for [original `blurhash.decode`](https://github.com/woltapp/blurhash/tree/master/TypeScript#decodeblurhash-string-width-number-height-number-punch-number--uint8clampedarray). It uses approximate calculation for speed reasons. Results may slightly differ from original but the difference is not noticeable (see [tests](./index.test.js)). This method does not validate input (⚠️).</td>
+        <td>Provides a drop-in replacement for <a href="https://github.com/woltapp/blurhash/tree/master/TypeScript#decodeblurhash-string-width-number-height-number-punch-number--uint8clampedarray">original <code>blurhash.decode</code></a>. It uses approximate calculations for speed reasons. Results may slightly differ from the original but the difference is not noticeable (see [tests](./index.test.js)). This method does not validate input (⚠️).</td>
     </tr>
     <tr>
         <td>getBlurHashAverageColor(blurhash: string) => [number, number, number]</td>
