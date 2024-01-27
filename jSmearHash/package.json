@@ -1,0 +1,46 @@
+{
+    "name": "jsmearhash",
+    "version": "1.0.0",
+    "description": "SmearHash Decoder & 2D Sprite Animation Library",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "benchmark": "node benchmark.js",
+        "demo": "webpack-cli --mode production ./demo/main.js -o ./demo/dist/",
+        "jest": "node --experimental-vm-modules node_modules/.bin/jest",
+        "prettier": "prettier --check .",
+        "prettier:fix": "prettier --write .",
+        "test": "npm run prettier && npm run jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/0x48piraj/smearhash.git"
+    },
+    "keywords": [
+        "smearhash",
+        "placeholder",
+        "sprite",
+        "animation",
+        "sprite animation"
+    ],
+    "author": "Piyush Raj",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/0x48piraj/smearhash/issues"
+    },
+    "homepage": "https://piyushraj.org/smearhash",
+    "devDependencies": {
+        "benny": "^3.7.1",
+        "blurhash": "^2.0.4",
+        "jest": "^29.3.1",
+        "prettier": "^2.7.1",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-jsbeautifier": "^3.0.0",
+        "uglify-es": "^3.3.9",
+        "gulp-uglify": "^3.0.2"
+    },
+    "type": "module"
+}
