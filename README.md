@@ -37,11 +37,47 @@ You can also see nice examples and try them out at [@raj/blurhash](https://piyus
 
 In short, SmearHash takes a video, and gives you a short list of strings (only 20-30 characters!) that represents the placeholder for that video. You do this on the backend of your service, and store the strings list along with the video. When you send media to your client, you send both the URL to the video, and the SmearHash strings list. Your client then takes the list, and decodes it into an video that it shows while the real video is loading over the network. The strings are short enough that it comfortably fits into whatever data format you use. For instance, it can easily be added as a field in a JSON object.
 
-#### In summary:
+### In summary:
 
 Want to know all the gory technical details? Read the [algorithm description](Algorithm.md).
 
 Implementing the algorithm is actually quite easy! Implementations are short and easily ported to your favourite language or platform.
+
+## Implementations
+
+So far, we have created these implementations:
+
+* [JavaScript](jSmearHash) - Decoder implementation, animation library and a demo.
+* [Python](smearhash) - Encoder and decoder implementations, and a larger library offering advanced features.
+
+These cover our use cases, but could probably use polishing, extending and improving. There are also these third party implementations that we know of:
+
+* _Your designed implementation here?_
+
+Can't find the language you're looking for? Try your luck with the GitHub search. For example, here are the search results for [repos which have "smearhash" in their name](https://github.com/search?q=smearhash+in%3Aname&type=repositories).
+
+Perhaps you'd like to help extend this list? Which brings us to...
+
+## Contributing
+
+We'd love contributions! The algorithm is [very simple](Algorithm.md) - less than two hundred lines of code - and can easily be
+ported to your platform of choice. And having support for more platforms would be wonderful! So, Java decoder? Golang encoder?
+Haskell? Rust? We want them all!
+
+We will also try to tag any issues on our [issue tracker](https://github.com/0x48piraj/smearhash/issues) that we'd love help with, so
+if you just want to dip in, go have a look.
+
+You're welcome to submit a pull request to our repository or initiate your own project to handle everything independently (just mention us for reference). We're open to both options.
+
+
+## Users
+
+Who uses SmearHash? Here are some projects we know about:
+
+* I'm ofcourse using it myself. SmearHashes are used in different personal projects as placeholders during video loading.
+
+
+* _Your name here?_
 
 
 ### Fun fact
