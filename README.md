@@ -7,6 +7,7 @@ In today's era, video dominates our world. SmearHash is a compact representation
 - Gives more accurate colors
 - **It's for videos!**
 
+
 ## Why would you want this?
 
 - Does your designer cry every time you load their beautifully designed screen, which is full of empty boxes because all the videos have not loaded yet?
@@ -19,6 +20,7 @@ In today's era, video dominates our world. SmearHash is a compact representation
     <img src="https://raw.githubusercontent.com/woltapp/blurhash/master/Media/WhyBlurHash.png" />
     <sub>Credits to <a href="https://github.com/woltapp/blurhash" target="_blank">@WoltApp/BlurHash</a> developers for this, clearly I am no designer.</sup>
 </p>
+
 
 ## Is this only useful as a video-loading placeholder?
 
@@ -33,11 +35,11 @@ You can also see nice examples and try them out at [@raj/blurhash](https://piyus
 
 ## How does it work?
 
-In short, BlurHash takes an image, and gives you a short string (only 20-30 characters!) that represents the placeholder for this image. You do this on the backend of your service, and store the string along with the image. When you send data to your client, you send both the URL to the image, and the BlurHash string. Your client then takes the string, and decodes it into an image that it shows while the real image is loading over the network. The string is short enough that it comfortably fits into whatever data format you use. For instance, it can easily be added as a field in a JSON object.
+In short, SmearHash takes a video, and gives you a short list of strings (only 20-30 characters!) that represents the placeholder for that video. You do this on the backend of your service, and store the strings list along with the video. When you send media to your client, you send both the URL to the video, and the SmearHash strings list. Your client then takes the list, and decodes it into an video that it shows while the real video is loading over the network. The strings are short enough that it comfortably fits into whatever data format you use. For instance, it can easily be added as a field in a JSON object.
 
-In summary:
+#### In summary:
 
-Want to know all the gory technical details? Read the algorithm description.
+Want to know all the gory technical details? Read the [algorithm description](Algorithm.md).
 
 Implementing the algorithm is actually quite easy! Implementations are short and easily ported to your favourite language or platform.
 
