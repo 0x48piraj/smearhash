@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>SmearHash by Piyush Raj</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="stylesheet" href="./css/style.css">
+    <script src="./js/smearhash.js"></script>
+
+	<script>
+		let sprite1,sprite2,sprite3;
+
+		function init(){
+            sprite1 = new jSmearHash({
+                hashList: ['UTHy5q%zxtV@|,ofj[bIK,MxRjt7InxFodWB', 'UWHVbtxuo|x][Qs:ban#PWaeM{RjRjRjxakC', 'UHG[i].S%LVs~UMxNGtR14rwR%ob-UtQt7R-', 'USHLucoeOAx][7n%TJxa-nxuVXWABrsTR.Rk', 'UGI4;Y%M=B?b]cITBpM{Po%MM_IoOZ$*+]bI', 'UQJHp|Ris%xu#3WWO?bb-:%2Z#RO7haJohOF', 'UGAmuMt6IUt7~qxsRkogn#oct7flRPj=jZWY', 'UEA,tURiIos:_4oGs.j[ROWAxuoeIVjXs:kB', 'UTJ8FgR*$w%N#3WBKPRipd%2m,RkF2V?xbR+', 'USJHw7s.-4-;#3NGKQM{cZxuVYRkOZrr$kWX', 'UNI#ZBfi,,-:#3RPGGNGt,%MrDVsBWVrxINx', 'UCI;q:57$^PU%q$%OWr;-M%1RpMdGwoz#9Oa', 'UQIX?WRjwGx]+WWBKjV?yD%2rDRjBWRis;Si', 'UYH.c;V@oatR+DWEXSnhtm%1eURjKkV@jJS5', 'UWI#u:tS$xxvz,ROXTjETetRIpM|O@nhwIX9', 'UHIhHYs;;ITK#MM{K*n#cD=|RQMx%iRivzK7', 'UCI#P%H?M^7h]]t8X.#%gd?G+aMcYRRNRqK,', 'UBJ7,ZOZ+q9t=+ivK+%MGt-prER4yEn#vgE4', 'UfI=Mqw]xsxaz,R-SeaxTxoeNHNGS$smw^kC', 'UcI}x1wHxVxaz,NyN^S2cZxZV[RjNxr?w_bI', 'UeJa_:$L$|xavcNeOER+lAxGRjRjSOs9w{Wq', 'UgIh$}bFt2kWz,WCbbjYtmxFV[RjOZWXnjW=', 'UhIYLWWqs+g4z,aebanht,xZV[RjJ:R,n+X9', 'UUH.NTROXOkr+Wbws,r;tm#+RRNHF|S$sDWr', 'UZI5f3V?f#XS+WbckBn~t,$fV[RQFfS5oMX9', 'UaI=GarpxVt7z,OZSgWBt-$zeoRjJBWBsobc', 'UfI5oSV?bYg3+WkDk9axcZxZV[RjJBR*o2bc', 'UVH_PtD%KN%2}6o~Rit7L2w]WYR*I9xaS5Rj', 'UVH_PsD%KN%1}6o~Rht7PVxCWYWBITxaW;Rj', 'UNIEz=Ejs%X.:|#+S}nNt,xunPM|BqV@nlX9', 'UEJQ_[WCWRGb=SVsXlv|t+?Hv}MxPCR4RpOu', 'UJIXv:EMX3TK=T$htPr;%0%1RQIV80R*w|XT', 'ULJHmzrqROKi+pRmo}V?%g-;rXV@BXZ}bdXT', 'UEI}R^D%P9tlwVx^-4jE-.+sIWIVPWTLajN|', 'UBJ@j[0#PoyFxO=_#irW%yv}N2IoL3tmwNE,', 'UFJkAdE1=VXU$YxaKjxC%e-Uv#IAGIV@i~Os', 'UHJtuEwb#5F|#3RQPAsjTc%MnPVs%irWrXJW', 'UJIE-6VswFXn[jR.TJngxs-oVsM{GwV@r[S%', 'UQIX~sJCouoyr9r=obX8-nxZWEVrGcX8aLOZ', 'UDIqr%0eT|xb~J-pvxS}Tb,.iwIAK+K6XVW@', 'ULIOOlOZ#itl+:n3O@V@yD%Mn4RPF}Rir@N{', 'UdIr85xWxUWXvcR,X8jYPBj[Rlo1XAs9r=Wq', 'UhJkirxDxVt7vcR+X8jYTeoeRkR*S$sTwcW=', 'USJkM@vys*S%vvKQXSw]t-$LRPRjJUe:spNe', 'ULI}eSM|bvXmw;oMxYWA=;-UM{ROCTR*s=Sj', 'UNIX~rxt-5tR:|MxOWWApb-;M}M{O]VswIbc', 'UDJ*9ibx$^M_#yVXOqb^Gt-:v~R5%haJerM}', 'UEI;;cM|,+ou+:nOKPOXyC?GrrMxTyM{w1XA', 'UGJ@%hT1]yR%rSivF|kWpc-oa0My%hbFv~Ro', 'UJI=0=XU=Cbv#3Z~KPbEtk%MV@M{pdoIrqWY', 'UQIY2#SiwZXS#3i_XTa_xs%1aKRPPWWBjFSi', 'UdIOwvWYoHS~vcjFkCjXx]xaagRjO[WVjFW?', 'UhIFG9WBbES$z,f6j?axtmxaa$RjK6R*nibc', 'UhI5rZV@bES$z,jbj=axt,xaa$V@J.R*n%bc', 'UfI5oSRjW-S~+Djufhawt,xaWYRjJ:R*n$bc', 'UcI5lIRPX6XS+DoMfgawt,xaWFRjJ:WBs9X9', 'UbI5f2RPW:XS:goMj;aepdxaWERjJ-WAspX9', 'UdH_}aRPSeXS:goMbXaxpdxaWBR*NuWAs;W=', 'UdH.WtM{SKkW:zofX5aelAxaV@WBNaadogW=', 'UbHx+=MxSdo}[7ogW.WBg*xaV@WVNGads;S5', 'UYHoB@IUSztR[7ogSKaectxaV@a#IojEt8R+', 'UVHo2nIAOqtR{togS0jFctxaV@bHMxjEo#R*'],
+                container: "sprite1",
+                columns: 8,
+                rows: 8,
+                widthOffset: 0,
+                startFrame: 1,
+                endFrame: 62,
+                // length: 4,
+                timing: 30,
+                autoStart: true,
+                repeat: true
+            });
+
+
+            sprite2 = new jSmearHash({
+                hashList: ['UTHy5q%zxtV@|,ofj[bIK,MxRjt7InxFodWB', 'UWHVbtxuo|x][Qs:ban#PWaeM{RjRjRjxakC', 'UHG[i].S%LVs~UMxNGtR14rwR%ob-UtQt7R-', 'USHLucoeOAx][7n%TJxa-nxuVXWABrsTR.Rk', 'UGI4;Y%M=B?b]cITBpM{Po%MM_IoOZ$*+]bI', 'UQJHp|Ris%xu#3WWO?bb-:%2Z#RO7haJohOF', 'UGAmuMt6IUt7~qxsRkogn#oct7flRPj=jZWY', 'UEA,tURiIos:_4oGs.j[ROWAxuoeIVjXs:kB', 'UTJ8FgR*$w%N#3WBKPRipd%2m,RkF2V?xbR+', 'USJHw7s.-4-;#3NGKQM{cZxuVYRkOZrr$kWX', 'UNI#ZBfi,,-:#3RPGGNGt,%MrDVsBWVrxINx', 'UCI;q:57$^PU%q$%OWr;-M%1RpMdGwoz#9Oa', 'UQIX?WRjwGx]+WWBKjV?yD%2rDRjBWRis;Si', 'UYH.c;V@oatR+DWEXSnhtm%1eURjKkV@jJS5', 'UWI#u:tS$xxvz,ROXTjETetRIpM|O@nhwIX9', 'UHIhHYs;;ITK#MM{K*n#cD=|RQMx%iRivzK7', 'UCI#P%H?M^7h]]t8X.#%gd?G+aMcYRRNRqK,', 'UBJ7,ZOZ+q9t=+ivK+%MGt-prER4yEn#vgE4', 'UfI=Mqw]xsxaz,R-SeaxTxoeNHNGS$smw^kC', 'UcI}x1wHxVxaz,NyN^S2cZxZV[RjNxr?w_bI', 'UeJa_:$L$|xavcNeOER+lAxGRjRjSOs9w{Wq', 'UgIh$}bFt2kWz,WCbbjYtmxFV[RjOZWXnjW=', 'UhIYLWWqs+g4z,aebanht,xZV[RjJ:R,n+X9', 'UUH.NTROXOkr+Wbws,r;tm#+RRNHF|S$sDWr', 'UZI5f3V?f#XS+WbckBn~t,$fV[RQFfS5oMX9', 'UaI=GarpxVt7z,OZSgWBt-$zeoRjJBWBsobc', 'UfI5oSV?bYg3+WkDk9axcZxZV[RjJBR*o2bc', 'UVH_PtD%KN%2}6o~Rit7L2w]WYR*I9xaS5Rj', 'UVH_PsD%KN%1}6o~Rht7PVxCWYWBITxaW;Rj', 'UNIEz=Ejs%X.:|#+S}nNt,xunPM|BqV@nlX9', 'UEJQ_[WCWRGb=SVsXlv|t+?Hv}MxPCR4RpOu', 'UJIXv:EMX3TK=T$htPr;%0%1RQIV80R*w|XT', 'ULJHmzrqROKi+pRmo}V?%g-;rXV@BXZ}bdXT', 'UEI}R^D%P9tlwVx^-4jE-.+sIWIVPWTLajN|', 'UBJ@j[0#PoyFxO=_#irW%yv}N2IoL3tmwNE,', 'UFJkAdE1=VXU$YxaKjxC%e-Uv#IAGIV@i~Os', 'UHJtuEwb#5F|#3RQPAsjTc%MnPVs%irWrXJW', 'UJIE-6VswFXn[jR.TJngxs-oVsM{GwV@r[S%', 'UQIX~sJCouoyr9r=obX8-nxZWEVrGcX8aLOZ', 'UDIqr%0eT|xb~J-pvxS}Tb,.iwIAK+K6XVW@', 'ULIOOlOZ#itl+:n3O@V@yD%Mn4RPF}Rir@N{', 'UdIr85xWxUWXvcR,X8jYPBj[Rlo1XAs9r=Wq', 'UhJkirxDxVt7vcR+X8jYTeoeRkR*S$sTwcW=', 'USJkM@vys*S%vvKQXSw]t-$LRPRjJUe:spNe', 'ULI}eSM|bvXmw;oMxYWA=;-UM{ROCTR*s=Sj', 'UNIX~rxt-5tR:|MxOWWApb-;M}M{O]VswIbc', 'UDJ*9ibx$^M_#yVXOqb^Gt-:v~R5%haJerM}', 'UEI;;cM|,+ou+:nOKPOXyC?GrrMxTyM{w1XA', 'UGJ@%hT1]yR%rSivF|kWpc-oa0My%hbFv~Ro', 'UJI=0=XU=Cbv#3Z~KPbEtk%MV@M{pdoIrqWY', 'UQIY2#SiwZXS#3i_XTa_xs%1aKRPPWWBjFSi', 'UdIOwvWYoHS~vcjFkCjXx]xaagRjO[WVjFW?', 'UhIFG9WBbES$z,f6j?axtmxaa$RjK6R*nibc', 'UhI5rZV@bES$z,jbj=axt,xaa$V@J.R*n%bc', 'UfI5oSRjW-S~+Djufhawt,xaWYRjJ:R*n$bc', 'UcI5lIRPX6XS+DoMfgawt,xaWFRjJ:WBs9X9', 'UbI5f2RPW:XS:goMj;aepdxaWERjJ-WAspX9', 'UdH_}aRPSeXS:goMbXaxpdxaWBR*NuWAs;W=', 'UdH.WtM{SKkW:zofX5aelAxaV@WBNaadogW=', 'UbHx+=MxSdo}[7ogW.WBg*xaV@WVNGads;S5', 'UYHoB@IUSztR[7ogSKaectxaV@a#IojEt8R+', 'UVHo2nIAOqtR{togS0jFctxaV@bHMxjEo#R*'],
+                container: "sprite2",
+                columns: 8,
+                rows: 8,
+                widthOffset: 0,
+                startFrame: 1,
+                endFrame: 62,
+                // length: 4,
+                timing: 30,
+                autoStart: true,
+                repeat: true
+            });
+
+
+			sprite3 = new jSmearHash({
+                hashList: ['UTHy5q%zxtV@|,ofj[bIK,MxRjt7InxFodWB', 'UWHVbtxuo|x][Qs:ban#PWaeM{RjRjRjxakC', 'UHG[i].S%LVs~UMxNGtR14rwR%ob-UtQt7R-', 'USHLucoeOAx][7n%TJxa-nxuVXWABrsTR.Rk', 'UGI4;Y%M=B?b]cITBpM{Po%MM_IoOZ$*+]bI', 'UQJHp|Ris%xu#3WWO?bb-:%2Z#RO7haJohOF', 'UGAmuMt6IUt7~qxsRkogn#oct7flRPj=jZWY', 'UEA,tURiIos:_4oGs.j[ROWAxuoeIVjXs:kB', 'UTJ8FgR*$w%N#3WBKPRipd%2m,RkF2V?xbR+', 'USJHw7s.-4-;#3NGKQM{cZxuVYRkOZrr$kWX', 'UNI#ZBfi,,-:#3RPGGNGt,%MrDVsBWVrxINx', 'UCI;q:57$^PU%q$%OWr;-M%1RpMdGwoz#9Oa', 'UQIX?WRjwGx]+WWBKjV?yD%2rDRjBWRis;Si', 'UYH.c;V@oatR+DWEXSnhtm%1eURjKkV@jJS5', 'UWI#u:tS$xxvz,ROXTjETetRIpM|O@nhwIX9', 'UHIhHYs;;ITK#MM{K*n#cD=|RQMx%iRivzK7', 'UCI#P%H?M^7h]]t8X.#%gd?G+aMcYRRNRqK,', 'UBJ7,ZOZ+q9t=+ivK+%MGt-prER4yEn#vgE4', 'UfI=Mqw]xsxaz,R-SeaxTxoeNHNGS$smw^kC', 'UcI}x1wHxVxaz,NyN^S2cZxZV[RjNxr?w_bI', 'UeJa_:$L$|xavcNeOER+lAxGRjRjSOs9w{Wq', 'UgIh$}bFt2kWz,WCbbjYtmxFV[RjOZWXnjW=', 'UhIYLWWqs+g4z,aebanht,xZV[RjJ:R,n+X9', 'UUH.NTROXOkr+Wbws,r;tm#+RRNHF|S$sDWr', 'UZI5f3V?f#XS+WbckBn~t,$fV[RQFfS5oMX9', 'UaI=GarpxVt7z,OZSgWBt-$zeoRjJBWBsobc', 'UfI5oSV?bYg3+WkDk9axcZxZV[RjJBR*o2bc', 'UVH_PtD%KN%2}6o~Rit7L2w]WYR*I9xaS5Rj', 'UVH_PsD%KN%1}6o~Rht7PVxCWYWBITxaW;Rj', 'UNIEz=Ejs%X.:|#+S}nNt,xunPM|BqV@nlX9', 'UEJQ_[WCWRGb=SVsXlv|t+?Hv}MxPCR4RpOu', 'UJIXv:EMX3TK=T$htPr;%0%1RQIV80R*w|XT', 'ULJHmzrqROKi+pRmo}V?%g-;rXV@BXZ}bdXT', 'UEI}R^D%P9tlwVx^-4jE-.+sIWIVPWTLajN|', 'UBJ@j[0#PoyFxO=_#irW%yv}N2IoL3tmwNE,', 'UFJkAdE1=VXU$YxaKjxC%e-Uv#IAGIV@i~Os', 'UHJtuEwb#5F|#3RQPAsjTc%MnPVs%irWrXJW', 'UJIE-6VswFXn[jR.TJngxs-oVsM{GwV@r[S%', 'UQIX~sJCouoyr9r=obX8-nxZWEVrGcX8aLOZ', 'UDIqr%0eT|xb~J-pvxS}Tb,.iwIAK+K6XVW@', 'ULIOOlOZ#itl+:n3O@V@yD%Mn4RPF}Rir@N{', 'UdIr85xWxUWXvcR,X8jYPBj[Rlo1XAs9r=Wq', 'UhJkirxDxVt7vcR+X8jYTeoeRkR*S$sTwcW=', 'USJkM@vys*S%vvKQXSw]t-$LRPRjJUe:spNe', 'ULI}eSM|bvXmw;oMxYWA=;-UM{ROCTR*s=Sj', 'UNIX~rxt-5tR:|MxOWWApb-;M}M{O]VswIbc', 'UDJ*9ibx$^M_#yVXOqb^Gt-:v~R5%haJerM}', 'UEI;;cM|,+ou+:nOKPOXyC?GrrMxTyM{w1XA', 'UGJ@%hT1]yR%rSivF|kWpc-oa0My%hbFv~Ro', 'UJI=0=XU=Cbv#3Z~KPbEtk%MV@M{pdoIrqWY', 'UQIY2#SiwZXS#3i_XTa_xs%1aKRPPWWBjFSi', 'UdIOwvWYoHS~vcjFkCjXx]xaagRjO[WVjFW?', 'UhIFG9WBbES$z,f6j?axtmxaa$RjK6R*nibc', 'UhI5rZV@bES$z,jbj=axt,xaa$V@J.R*n%bc', 'UfI5oSRjW-S~+Djufhawt,xaWYRjJ:R*n$bc', 'UcI5lIRPX6XS+DoMfgawt,xaWFRjJ:WBs9X9', 'UbI5f2RPW:XS:goMj;aepdxaWERjJ-WAspX9', 'UdH_}aRPSeXS:goMbXaxpdxaWBR*NuWAs;W=', 'UdH.WtM{SKkW:zofX5aelAxaV@WBNaadogW=', 'UbHx+=MxSdo}[7ogW.WBg*xaV@WVNGads;S5', 'UYHoB@IUSztR[7ogSKaectxaV@a#IojEt8R+', 'UVHo2nIAOqtR{togS0jFctxaV@bHMxjEo#R*'],
+                container: "sprite3",
+                columns: 8,
+                rows: 8,
+                widthOffset: 0,
+                startFrame: 1,
+                endFrame: 62,
+                // length: 4,
+                timing: 30,
+                autoStart: true,
+                repeat: true
+            });
+
+
+		} // end function init
+	</script>
+
+</head>
+
+<body id="top" onload="init()">
+
+	<section id="banner" data-video="images/banner">
+		<div class="inner">
+			<header>
+				<h1>SmearHash</h1>
+				<p>A very compact representation of a placeholder for a video.</p>
+				<a href="https://github.com/0x48piraj/smearhash" target="_blank">https://github.com/0x48piraj/smearhash</a>
+			</header>
+
+		</div>
+	</section>
+
+
+	<!-- Main -->
+	<div id="main">
+		<div class="inner">
+
+			<!-- Boxes -->
+			<div class="thumbnails">
+
+				<div class="box">
+					<div class="sprite-container">
+						<div id="sprite1" class="sprite"></div>
+					</div>
+					<div class="inner">
+						<h3>Example 1</h3>
+						<p class='code'>
+						sprite1 = new jSmearHash({<br>
+						hashList: ['...', '...', '...'],<br>
+						container: "elementId",<br>
+						columns: 6,<br>
+						rows: 6,<br>
+						timing: 100,<br>
+						autoStart: true,<br>
+						repeat: true<br>
+						});						
+						</p>
+						<div class="btn-container">
+							<button onclick="sprite1.start()" class="btn-left button style2">START</button>
+							<button onclick="sprite1.stop()" class="btn-right button style2">STOP</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="sprite-container">
+						<div id="sprite2" class="sprite"></div>
+					</div>
+					<div class="inner">
+						<h3>Example 2</h3>
+						<p class='code'>
+						sprite2 = new jSmearHash({<br>
+						hashList: ['...', '...', '...'],<br>
+						container: "elementId",<br>
+						columns: 6,<br>
+						rows: 6,<br>
+						timing: 100,<br>
+						autoStart: true,<br>
+						repeat: true<br>
+						});						
+						</p>
+						<div class="btn-container">
+							<button onclick="sprite2.start()" class="btn-left button style2">START</button>
+							<button onclick="sprite2.stop()" class="btn-right button style2">STOP</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="sprite-container">
+						<div id="sprite3" class="sprite"></div>
+					</div>
+					<div class="inner">
+						<h3>Example 3</h3>
+						<p class='code'>
+						sprite3 = new jSmearHash({<br>
+						hashList: ['...', '...', '...'],<br>
+						container: "elementId",<br>
+						columns: 6,<br>
+						rows: 6,<br>
+						timing: 100,<br>
+						autoStart: true,<br>
+						repeat: true<br>
+						});						
+						</p>
+						<div class="btn-container">
+							<button onclick="sprite3.start()" class="btn-left button style2">START</button>
+							<button onclick="sprite3.stop()" class="btn-right button style2">STOP</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="box">	
+		<div class="inner">
+			<div class="table-container">
+				<h3>Parameters</h4>
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th></th>
+						<th>Info</th>
+					</tr>
+					<tr>
+						<td>hashList</td>
+						<td>List</td>
+						<td>REQUIRED</td>
+						<td>The smearhashes list to the target video</td>
+					</tr>
+					<tr>
+						<td>container</td>
+						<td>String</td>
+						<td>REQUIRED</td>
+						<td>ID of html element to use for the sprite</td>
+					</tr>
+					<tr>
+						<td>columns</td>
+						<td>Number</td>
+						<td>REQUIRED</td>
+						<td>The number of columns your sprite sheet has</td>
+					</tr>
+					<tr>
+						<td>rows</td>
+						<td>Number</td>
+						<td>REQUIRED</td>
+						<td>The number of rows your sprite sheet has</td>
+					</tr>
+					<tr>
+						<td>timing</td>
+						<td>Number</td>
+						<td>REQUIRED</td>
+						<td>The delay in ms between each frame</td>
+					</tr>
+					<tr>
+						<td>widthOffset</td>
+						<td>Number</td>
+						<td></td>
+						<td>If the sprite is not quite divisible by it's no of columns then you can adjust it with the widthOffset</td>
+					</tr>
+					<tr>
+						<td>startFrame</td>
+						<td>Number</td>
+						<td></td>
+						<td>The number of which frame you would like to start on</td>
+					</tr>
+					<tr>
+						<td>length</td>
+						<td>Number</td>
+						<td></td>
+						<td>The number of frames you would like to play from the start frame (do not exceed max length)</td>
+					</tr>
+					<tr>
+						<td>repeat</td>
+						<td>Boolean</td>
+						<td></td>
+						<td>Do you want the sprite animation to repeat, yes = true, no = false, default = true</td>
+					</tr>
+					<tr>
+						<td>onStart</td>
+						<td>function</td>
+						<td></td>
+						<td>Function callback for when start is called</td>
+					</tr>
+					<tr>
+						<td>onStop</td>
+						<td>function</td>
+						<td></td>
+						<td>Function callback for when stop is called</td>
+					</tr>
+					<tr>
+						<td>onProgress</td>
+						<td>function</td>
+						<td></td>
+						<td>Function called for each frame setp of the sprite</td>
+					</tr>
+					<tr>
+						<td>onRepeat</td>
+						<td>function</td>
+						<td></td>
+						<td>Function callback for when sprite animation repeats</td>
+					</tr>
+					<tr>
+						<td>onComplete</td>
+						<td>function</td>
+						<td></td>
+						<td>Function callback for when sprite animation is complete</td>
+					</tr>
+				</table>
+			</div>
+
+			<br>
+
+			<div class="table-container">
+			<h3>Available methods</h3>
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>Info</th>
+					</tr>
+					<tr>
+						<td>start()</td>
+						<td>Starts/resumes the sprite animation</td>
+					</tr>
+					<tr>
+						<td>stop()</td>
+						<td>Stops the sprite animation</td>
+					</tr>
+					<tr>
+						<td>restart()</td>
+						<td>Restarts the sprite animation from start</td>
+					</tr>
+				</table>					
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<p><a href="mailto:hello@piyushraj.org" target="_blank">hello@piyushraj.org</a></p>
+		</div>
+	</footer>
+
+</body>
+
+</html>

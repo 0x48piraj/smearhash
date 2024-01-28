@@ -30,7 +30,7 @@ Well, that is what it's designed for originally, but it turns out to be useful f
 
 - The data representation makes it quite easy to extract color features of the video for different areas.
 
-You can also see nice examples and try them out at [@raj/blurhash](https://piyushraj.org/blurhash).
+You can also see the demo and try it out at [@raj/smearhash](https://piyushraj.org/smearhash).
 
 
 ## How does it work?
